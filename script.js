@@ -99,28 +99,28 @@ let startRound = () => {
     doorImage3.src = closedDoorPath;
     startButton.innerHTML = "Good Luck!";
     currentlyPlaying = true;
-    counter.classList.add('initial-counter');
-    counter.classList.remove('loosing-counter');
-    counter.classList.remove('winning-counter');
+    startButton.classList.add('initial-button');
+    startButton.classList.remove('loosing-button');
+    startButton.classList.remove('winning-button');
     randomChoreDoorGenerator();
 }
 
 let gameOver = status => {
     if(status === 'win'){
-        counter.classList.remove('initial-counter');
-        counter.classList.remove('loosing-counter');
-        counter.classList.add('winning-counter');
-        startButton.innerHTML = "You win! Play again?";
+        startButton.classList.remove('initial-button');
+        startButton.classList.remove('loosing-button');
+        startButton.classList.add('winning-button');
+        startButton.innerHTML = "You win! Press to play again.";
         winning += 1;
         counter.innerHTML = `Your winning streak is: ${winning}`;
         
     } else {
         winning = 0;
-        counter.classList.remove('initial-counter');
-        counter.classList.remove('winning-counter');
-        counter.classList.add('loosing-counter');
-        startButton.innerHTML = "Game over! Play again?";
-        counter.innerHTML = 'Your winning streaks is: 0';
+        startButton.classList.remove('initial-button');
+        startButton.classList.remove('winning-button');
+        startButton.classList.add('loosing-button');
+        startButton.innerHTML = "Game over! Press to play again.";
+        counter.innerHTML = 'Your winning streak is: 0';
     }
     currentlyPlaying = false;
 };
