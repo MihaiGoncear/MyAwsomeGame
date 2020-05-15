@@ -54,13 +54,14 @@ let randomChoreDoorGenerator = () => {
         openDoor2 = spaceDoorPath;
         openDoor3 = beachDoorPath;
     } else if (choreDoor === 1){
+        
+        openDoor1 = beachDoorPath;
         openDoor2 = botDoorPath;
         openDoor3 = spaceDoorPath;
-        openDoor1 = beachDoorPath;
     } else {(choreDoor === 2)
-        openDoor3 = botDoorPath;
         openDoor1 = spaceDoorPath;
         openDoor2 = beachDoorPath;
+        openDoor3 = botDoorPath;
     };
 };
 
