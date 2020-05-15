@@ -121,7 +121,6 @@ let gameOver = status => {
         counter.classList.add('loosing-counter');
         startButton.innerHTML = "Game over! Play again?";
         counter.innerHTML = 'Your winning streaks is: 0';
-        
     }
     currentlyPlaying = false;
 };
