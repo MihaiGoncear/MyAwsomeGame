@@ -106,6 +106,7 @@ let gameOver = status => {
         winning += 1;
         counter.innerHTML = `Your winning streak is: ${winning}`;
     } else {
+        winning = 0;
         startButton.innerHTML = "Game over! Play again?";
         counter.innerHTML = 'Your winning streaks is: 0'
     }
