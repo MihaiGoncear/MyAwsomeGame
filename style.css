@@ -63,14 +63,38 @@ body {
     border-radius: 15px;
 }
 
-.counter {
+.winning-counter {
     margin: auto;
     width: 300px;
     font-family: ‘Work Sans’;
-    background-color: #a2a3e2;
+    background-color: #acf1c7;
     padding: 10px 0;
     font-size: 18px;
     color: #010165;
     margin-bottom: 21px;
     border: 3px solid rgb(72, 255, 0);
+}
+
+.loosing-counter {
+    margin: auto;
+    width: 300px;
+    font-family: ‘Work Sans’;
+    background-color: #f1acac;
+    padding: 10px 0;
+    font-size: 18px;
+    color: #010165;
+    margin-bottom: 21px;
+    border: 3px solid rgb(255, 0, 0);
+}
+
+.initial-counter {
+    margin: auto;
+    width: 300px;
+    font-family: ‘Work Sans’;
+    background-color: #c4c4c4;
+    padding: 10px 0;
+    font-size: 18px;
+    color: #06064e;
+    margin-bottom: 21px;
+    border: 3px solid rgb(0, 0, 0);
 }

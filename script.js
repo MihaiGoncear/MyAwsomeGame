@@ -6,6 +6,8 @@ let startButton = document.getElementById('start');
 let counter = document.getElementById('counter');
 let winning = 0;
 
+counter.classList.add('initial-counter');
+
 const botDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg";
 const beachDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/beach.svg";
 const spaceDoorPath  = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/space.svg";
@@ -97,18 +99,29 @@ let startRound = () => {
     doorImage3.src = closedDoorPath;
     startButton.innerHTML = "Good Luck!";
     currentlyPlaying = true;
+    counter.classList.add('initial-counter');
+    counter.classList.remove('loosing-counter');
+    counter.classList.remove('winning-counter');
     randomChoreDoorGenerator();
 }
 
 let gameOver = status => {
     if(status === 'win'){
+        counter.classList.remove('initial-counter');
+        counter.classList.remove('loosing-counter');
+        counter.classList.add('winning-counter');
         startButton.innerHTML = "You win! Play again?";
         winning += 1;
         counter.innerHTML = `Your winning streak is: ${winning}`;
+        
     } else {
         winning = 0;
+        counter.classList.remove('initial-counter');
+        counter.classList.remove('winning-counter');
+        counter.classList.add('loosing-counter');
         startButton.innerHTML = "Game over! Play again?";
-        counter.innerHTML = 'Your winning streaks is: 0'
+        counter.innerHTML = 'Your winning streaks is: 0';
+        
     }
     currentlyPlaying = false;
 };
