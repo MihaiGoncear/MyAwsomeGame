@@ -50,6 +50,7 @@ body {
 }
 
 .initial-button {
+    cursor: pointer;
     margin: auto;
     text-align: center;
     border-radius: 25px;
@@ -65,6 +66,7 @@ body {
 }
 
 .winning-button {
+    cursor: pointer;
     margin: auto;
     text-align: center;
     border-radius: 25px;
@@ -80,6 +82,7 @@ body {
 }
 
 .loosing-button {
+    cursor: pointer;
     margin: auto;
     text-align: center;
     border-radius: 25px;
